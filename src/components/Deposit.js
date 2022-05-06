@@ -58,11 +58,11 @@ function Deposit(){
                     { data.found  ? (<>
                         <form onSubmit={handleSubmit}>
                             <div className="form-row form-group">
-                                <label className="col-sm-2 col-form-label">Transaction Date</label>
+                                <label className="col-sm-2 col-form-label" style={{color:"white"}}>Transaction Date</label>
                                 <div className="col-3">
                                     <input type="date" id="tdate" name="tdate" value={tran.tdate} onChange={handleInput} className="form-control" />
                                 </div>
-                                <label className="col-sm-2 col-form-label">Deposit Amount</label>
+                                <label className="col-sm-2 col-form-label" style={{color:"white"}}>Deposit Amount</label>
                                 <div className="col-3">
                                     <input type="number" min="1" name="cramount" value={tran.amount} onChange={handleInput} className="form-control" />
                                 </div>

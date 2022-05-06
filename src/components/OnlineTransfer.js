@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 
+
 function OnlineTransfer(){
     const cid=sessionStorage.getItem("id")
     const [msg,setMsg]=useState(null)
@@ -18,6 +19,7 @@ function OnlineTransfer(){
             setMsg("Transfer successfully")
         })
         .catch(err=>{
+            window.confirm("Insufficient balance");
             console.log(err)
         })
     }
@@ -62,10 +64,10 @@ function OnlineTransfer(){
             <div className="card-body">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group form-row">
-                        <label className="col-sm-4 col-form-label">Select Beneficiary</label> 
+                        <label className="col-sm-4 col-form-label">Select Recipient</label> 
                         <div className="col-sm-8">
                         <select type="text" name="bname" onChange={handleInput} className="form-control">
-                            <option>---- Select Beneficiary ---</option>
+                            <option>Select Recipient </option>
                             {blist.map(b=>(
                                 <option key={b.id} value={b.id}>{b.bname }</option>
                             ))}

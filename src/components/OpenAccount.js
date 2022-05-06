@@ -56,24 +56,23 @@ function OpenAccount(){
                     <SideBar />
                 </div>
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">Open Account</h4>
                     <div className="row">
-    <div className="col-5 mx-auto">
+    <div className="col-5 mx-auto"><br/><br/>
         <div className="card p-3">
             <form method="post" onSubmit={handleSubmit}>
-                <div className="form-group">      
-                    <label>Select Customer</label>
+                <div className="form-group"> 
+                    <label>Customer</label>
                     <select name="custid" value={account.custid} onChange={handleInput} required className="form-control">
-                        <option value="">--- Select Customer ---</option>
+                        <option value="">Select Customer</option>
                         {customers.map(x=>(
                             <option key={x.id} value={x.id}>{x.id} - {x.cname}</option>
                         ))}
                     </select>
                 </div>
                 <div className="form-group">                
-                    <label>Select Account Type</label>
+                    <label>Account Type</label>
                     <select name="actype" value={account.actype} onChange={handleInput} required className="form-control">
-                        <option value="">--- Select Account Type ---</option>
+                        <option value="">Select Account Type</option>
                         <option>Saving Account</option>
                         <option>Current Account</option>
                     </select>
@@ -88,9 +87,9 @@ function OpenAccount(){
         </div>
     </div>
 </div>
-                </div>
-            </div>
-        </div>
+</div>   
+</div>
+</div>
         </>
     )
 }

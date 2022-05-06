@@ -27,3 +27,9 @@
     transform: rotate(360deg);
   }
 }
+.container-fluid{
+  background-image :url("https://www.civista.bank/assets/img/olb-background.png");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+    min-height:100vh;
+}

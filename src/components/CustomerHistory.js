@@ -26,15 +26,15 @@ function CustomerHistory(){
                     <SideBar />
                 </div>
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">Transactions History</h4>
-                    <table class="table table-bordered table-striped table-sm">
-						<thead class="table-primary">
+                    
+                    <table class="table">
+						<thead class="thead-light">
 							<tr>
 								<th>Id</th>
 								<th>Transaction Date</th>
 								<th>Particulars</th>
-								<th>Dr Amount</th>
-								<th>Cr Amount</th>
+								<th>Debit Amount</th>
+								<th>Credit Amount</th>
 							</tr>
 						</thead>
 						<tbody>

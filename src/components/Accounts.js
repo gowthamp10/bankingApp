@@ -22,8 +22,8 @@ function Accounts(){
                 </div>
                 <div className="col-sm-10">
                     <h4 className="text-left p-2 border-bottom border-success"></h4>
-                    <table className="table table-bordered table-light table-striped table-hover">
-                <thead>
+                    <table className="table ">
+                <thead className="thead-light">
                     <tr>
                         <th>Account No</th>
                         <th>Holder Name</th>

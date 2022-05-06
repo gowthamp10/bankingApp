@@ -78,8 +78,8 @@ function ChangePassword(){
                                     <input type="password" required name="cpwd" value={user.cpwd} onChange={handleInput} className="form-control"
                                         placeholder="Repeat Password"/>
                                         </div>
-                                </div>
-                                <input type="submit" value="Change Password" className="btn btn-primary float-right"/>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit" value="Change Password" className="btn btn-primary "/>
                             </form>  
                         </div>
                     </div>

@@ -31,7 +31,7 @@ function Cheque(){
                     <SideBar />
                 </div>
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">Cheque Book</h4>
+                <br/><br/>
                     <div className="card" style={{textAlign:"center"}}>
                         
                         <div className="card">

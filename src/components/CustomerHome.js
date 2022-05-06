@@ -30,7 +30,7 @@ function CustomerHome(){
                         <div className="card-header">
                             <h5>Customer Profile</h5>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body" style={{backgroundColor:"#27285C"}}>
                         <table className="table table-borderless">
                             <tbody>
                                 <tr>

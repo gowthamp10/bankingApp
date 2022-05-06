@@ -17,10 +17,12 @@ import BankReport from './components/BankReport';
 import ChangePassword from './components/ChangePassword';
 import EditCustomer from './components/EditCustomer';
 import CustomerHistory from './components/CustomerHistory';
-import Beneficiary from './components/Beneficiary';
 import OnlineTransfer from './components/OnlineTransfer';
 import CustomerHome from './components/CustomerHome';
 import UpdateInfo from './components/UpdateInfo';
+import Recipient from './components/Recipient';
+import Balance from './components/Balance';
+import Offers from './components/Offers';
 
 function App() {
   return (
@@ -44,10 +46,12 @@ function App() {
           <Route element={<TodaysTransactions/>} path="/todays"/>                              
           <Route element={<BankReport/>} path="/breport"/>                              
           <Route element={<ChangePassword/>} path="/changepwd"/>                              
-          <Route element={<CustomerHistory/>} path="/thistory"/>                              
+          <Route element={<CustomerHistory/>} path="/thistory"/> 
+          <Route element={<Balance/>} path="/balance"/>                              
           <Route element={<CustomerHome/>} path="/chome"/>                              
-          <Route element={<Beneficiary/>} path="/beneficiary"/>                              
-          <Route element={<OnlineTransfer/>} path="/otransfer"/>                              
+          <Route element={<Recipient/>} path="/recipient"/>                              
+          <Route element={<OnlineTransfer/>} path="/otransfer"/> 
+          <Route element={<Offers/>} path="/offers"/>                              
         </Routes>
       </BrowserRouter>
     </div>

@@ -4,6 +4,7 @@
     background-size: 100% 100%;
     background-attachment: fixed;
     min-height:100vh;
+    color: white;
 }
 .login{    
     background:  
@@ -36,4 +37,12 @@ table.table-bordered > thead > tr > th{
 table.table-bordered > tbody > tr > td{
     border:1px solid black;
 }
-
+.card{
+    background-color: #D4F1F4;
+}
+.table{
+    color:white
+}
+.table-hover tbody tr:hover >th{
+    background-color: red;
+}

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import SideBar from "./SideBar";
 
-function Beneficiary(){
+function Recipient(){
     const cid=sessionStorage.getItem("id")
     const [blist,setBlist]=useState([])
     const [data,setData]=useState({
@@ -54,15 +54,15 @@ function Beneficiary(){
                 <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
                     <SideBar />
                 </div>
-                <div className="col-sm-10">
+                <div style={{paddingLeft:"200px"}}>
                     <div className="row">
                         <div className="col-sm-8">        
-                            <h4 className="text-center p-2">All Beneficiary</h4>
+                            <h4 className="text-center p-2" style={{color:"white"}}>All Recipient</h4>
                             <table className="table table-sm">
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Beneficiary Name</th>
+                                        <th>Recipient Name</th>
                                         <th>Bank Name</th>
                                         <th>Account Number</th>
                                         <th>Max Limit</th>
@@ -79,13 +79,13 @@ function Beneficiary(){
                                     </tr>
                                 ))}
                                 </tbody>
-                            </table>
+                            </table><br/>
                         </div>
-                        <div className="col-sm-4">
-                            <h4 className="text-center p-2">Add Beneficiary</h4>
+                        <div  style={{paddingLeft:"100px"}}>
+                            <h4 className="text-center p-2"style={{color:"white"}}>Add Recipient</h4>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
-                                    <input type="text" required name="bname" value={data?.bname} onChange={handleInput} placeholder="Beneficiary Name" 
+                                    <input type="text" required name="bname" value={data?.bname} onChange={handleInput} placeholder="Recipient Name" 
                                         className="form-control"/>
                                 </div>
                                 <div className="form-group">
@@ -103,8 +103,8 @@ function Beneficiary(){
                                 <div className="form-group">
                                     <input type="number" required name="maxlimit" value={data?.maxlimit} onChange={handleInput} placeholder="Maximum Limit" 
                                         className="form-control"/>
-                                </div>
-                                <input type="submit" value="Add Beneficiary" className="btn btn-primary float-right"/>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit" value="Add Recipient" className="btn btn-primary"/>
                             </form>
                         </div>    
                     </div>
@@ -114,4 +114,4 @@ function Beneficiary(){
         </>
     )}
 
-export default Beneficiary;
+export default Recipient;

@@ -93,8 +93,7 @@ function RegisterPage(){
             <div className="row">
                 <div className="col-sm-2 offset-1">
                     
-                    {selectedPhoto ? <img className="img-thumbnail" src={file} alt="Photo" /> : 
-                    <img className="img-thumbnail" src={'images/image.jpg'} alt="Photo" />} 
+                     
                     <input type="file" value={user?.photo} name="photo" onChange={handleFileInput} className="form-control-file" accept=".png" />
                     {errors?.photo && <small className="text-danger float-right">{errors?.photo}</small>}
 

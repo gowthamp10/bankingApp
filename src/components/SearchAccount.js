@@ -53,15 +53,16 @@ function SearchAccount({setData}){
     }
     return(        
         <>
-        <h5>Search Account Details</h5>
+        <div style={{paddingLeft:"20px"}}>
+       <br/>
         <div className="form-group form-inline">
-            <label>Account No: </label>
+            <label style={{color:"white"}}>Account No: </label>
             <input type="text" pattern="[0-9]{5,10}" value={search} onChange={handleInput} className="form-control ml-2" name="accno" placeholder="Account Number" />
-            <button type="button" onClick={handleSearch} className="btn btn-success ml-2">Search</button>                
+            <button type="button" onClick={handleSearch} className="btn btn-primary ml-2">Search</button>                
         </div>
         {found ? (
             <>
-            <div className="card shadow">
+            <div className="card shadow" style={{backgroundColor:"#28275C"}}>
                 <div className="card-body">
             <table className="table">
                 <tbody>
@@ -92,6 +93,7 @@ function SearchAccount({setData}){
             <div className="mb-3"></div>
             </>
         ):(<h5 className="text-danger">{err}</h5>)}
+        </div>
         </>
     )
 }

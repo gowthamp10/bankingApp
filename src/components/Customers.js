@@ -21,9 +21,10 @@ function Customers(){
                     <SideBar />
                 </div>
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">All Customers</h4>
-                    <table className="table table-bordered table-light table-striped table-hover">
-                <thead>
+                    <br/>
+                <div >
+                <table className="table">
+                <thead className="thead-light">
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
@@ -50,6 +51,7 @@ function Customers(){
                 ))}
                 </tbody>
             </table>
+            </div>
                 </div>
             </div>
         </div>

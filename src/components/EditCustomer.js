@@ -59,12 +59,12 @@ function EditCustomer(){
                     <SideBar />
                 </div>
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">Customer KYC</h4>
+                    <h4 className="text-left p-2 border-bottom border-success" style={{color:"white"}}>Know Your Customer</h4>
                     <SearchAccount setData={setData} />
-
+                    <div >
                     { data.found  ? (<>
-                        <form onSubmit={handleSubmit}>
-                            <div className="card shadow">
+                        <form onSubmit={handleSubmit} >
+                            <div className="card shadow" style={{backgroundColor:"#28275C",color:"white"}}>
                                 <div className="card-body">
                             <div className="form-row form-group">
                                 <label className="col-sm-2">Customer Name</label>
@@ -96,11 +96,12 @@ function EditCustomer(){
                                     <input type="checkbox" id="nb" name="netbanking" checked={netbanking} onChange={handleChange} />
                                 </div>
                             </div>
-                            <button type="submit" className="col-sm-2 btn btn-primary btn-sm float-right">Update Information</button>
+                            <button type="submit" className="col-sm-2 btn btn-primary btn-sm float-right">Update</button>
                             </div>
                             </div>
                         </form>
                     </>):""}
+                </div>
                 </div>
             </div>
         </div>
