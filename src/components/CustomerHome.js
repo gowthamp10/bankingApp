@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import SideBar from "./SideBar";
+import HeaderCust from "./HeaderCust";
+
 
 function CustomerHome(){
     const cid=sessionStorage.getItem("id")
@@ -18,20 +18,17 @@ function CustomerHome(){
     },[])
     return (
         <>
-        <Header/>   
+        <HeaderCust/>   
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
-                
-                <div className="col-sm-6 p-3">
+                <br/>
+                <div style={{paddingLeft:"400px"}}><br/>
                     <div className="card shadow">
                         <div className="card-header">
-                            <h5>Customer Profile</h5>
+                            <h5>{acinfo?.customer.cname}'s Profile</h5>
                         </div>
                         <div className="card-body" style={{backgroundColor:"#27285C"}}>
-                        <table className="table table-borderless">
+                        <table className="table table-borderless" >
                             <tbody>
                                 <tr>
                                     <th>Customer Name</th>

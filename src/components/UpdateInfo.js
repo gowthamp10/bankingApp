@@ -55,9 +55,7 @@ function UpdateInfo(){
         <Header/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-setCustomersparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
+                
                 <div className="col-sm-10">
                     <SearchAccount setData={setData} />
 

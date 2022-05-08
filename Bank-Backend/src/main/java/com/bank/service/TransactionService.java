@@ -37,7 +37,6 @@ public class TransactionService {
 		account.setBalance(account.getBalance()+tran.getCramount());
 		adao.save(account);
 	}
-	
 	public void withdraw(TransactionDTO dto) {	
 		Transactions tran=TransactionDTO.toEntity(dto);
 		Account account=adao.findById(dto.getAccno()).get();
@@ -89,8 +88,5 @@ public class TransactionService {
 				.collect(Collectors.toList());
 	}
 	
-	public List<Transactions> todaysTransactions(){
-		return dao.todays();
-	}
 	
 }

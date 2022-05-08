@@ -57,6 +57,15 @@ public class AccountService {
 		dao.save(acc);
 		tdao.save(new Transactions(LocalDate.now(), "Account Open",  acc.getBalance(),0, acc));
 	}
+	//
+	public boolean deleteAccount(int accno) {
+		Optional<Account> account= dao.findById(accno);
+		if(account.isPresent()) {
+			dao.deleteById(accno);
+			return true;
+		}
+		return false;
+	}
 	
 	public int generateAccno() {
 		return dao.count()==0 ? 10001 : dao.generateAccountNo();

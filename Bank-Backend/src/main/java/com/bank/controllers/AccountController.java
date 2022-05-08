@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -75,7 +76,6 @@ public class AccountController {
 		tservice.deposit(dto);
 		return Response.success(dto);
 	}
-	
 	@PostMapping("/withdraw")
 	public ResponseEntity<?> withdraw(@RequestBody TransactionDTO dto) {
 		dto.setTdate(LocalDate.now());
@@ -91,23 +91,12 @@ public class AccountController {
 		return Response.success(dto);
 	}
 	
-	@GetMapping("/passbook/{accno}")
-	public ResponseEntity<?> findAccountTransactions(@PathVariable("accno") int accno) {
-		List<Transactions> result = tservice.allAccountTransactions(accno);
-		return Response.success(result);
-	}
-	
 	@GetMapping("/history/{id}")
 	public ResponseEntity<?> findHistoryTransactions(@PathVariable("id") int cid) {
 		List<Transactions> result = tservice.allHistoryTransactions(cid);
 		return Response.success(result);
 	}
 	
-	@GetMapping("/todays")
-	public ResponseEntity<?> todaysTransactions(){
-		List<Transactions> result = tservice.todaysTransactions();
-		return Response.success(result);
-	}
 	
 	@GetMapping("/all")
 	public ResponseEntity<?> allTransactions(){
@@ -119,6 +108,13 @@ public class AccountController {
 	public ResponseEntity<?> onlinetransfer(@RequestBody TransferDTO dto) {
 		System.out.println(dto);
 		return Response.success("Transfer amount successfully");
+	}
+	@DeleteMapping("/deleteaccount/{accno}")
+	public String deleteAccount(@PathVariable("accno") int accno) {
+		if(accservice.deleteAccount(accno)) {
+			return "User with Id : "+accno+" is found and deleted";
+		}
+		return "Not found";
 	}
 	
 }

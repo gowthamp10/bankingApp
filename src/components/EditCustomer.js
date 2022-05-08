@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import SearchAccount from "./SearchAccount";
-import SideBar from "./SideBar";
+
 
 function EditCustomer(){
     const navigate=useNavigate()
@@ -38,7 +38,7 @@ function EditCustomer(){
     }
 
     useEffect(()=>{
-        console.log("effect-line-53-",data)
+        console.log(data)
         axios.get("http://localhost:8090/api/accounts/"+data.accno)
         .then(resp=>{
             const info=resp.data.data;
@@ -55,9 +55,7 @@ function EditCustomer(){
         <Header/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-setCustomersparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
+                
                 <div className="col-sm-10">
                     <h4 className="text-left p-2 border-bottom border-success" style={{color:"white"}}>Know Your Customer</h4>
                     <SearchAccount setData={setData} />

@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header";
-import SideBar from "./SideBar";
+import { useDispatch } from "react-redux"
 
 function ChangePassword(){
     const [user,setUser]=useState({
@@ -11,6 +10,15 @@ function ChangePassword(){
         "old":"",
         "cpwd":""
     })
+    const navigate=useNavigate()
+    const dispatch=useDispatch()
+    const role=sessionStorage.getItem("role")
+    console.log("Role ",role)
+    const logout=()=>{
+        dispatch({type:'LogOut'})
+        sessionStorage.clear();
+        navigate("/");
+    }
     const [errmsg,setErr]=useState(null)
     const [success,setSuccess]=useState(null)
 
@@ -45,13 +53,11 @@ function ChangePassword(){
 
     return(
         <>
-        <Header/>
+        <div >
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
-                <div className="col-sm-5 offset-2">
+                
+                <div style={{paddingLeft:"350px"}} >
                     <div className="card shadow mt-3">
                         <div className="card-header">
                             <h5>Change Password</h5>
@@ -94,7 +100,11 @@ function ChangePassword(){
                         </div>
                     ): ''}
                 </div>
+            </div><br/>
+            <div style={{paddingLeft:"500px"}}>
+            <button onClick={()=>logout()} className="list-group-item list-group-item-primary">Logout</button>
             </div>
+        </div>
         </div>
         </>
     )

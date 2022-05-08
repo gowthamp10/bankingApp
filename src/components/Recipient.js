@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header";
-import SideBar from "./SideBar";
+import HeaderCust from "./HeaderCust";
+
 
 function Recipient(){
     const cid=sessionStorage.getItem("id")
@@ -47,18 +47,16 @@ function Recipient(){
         loaddata()
     },[])
     return (
-<>
-        <Header/>
+        <>
+        <HeaderCust/>
         <div className="container-fluid">
-            <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
+            <div className="row" >
+                
                 <div style={{paddingLeft:"200px"}}>
                     <div className="row">
-                        <div className="col-sm-8">        
+                        <div style={{paddingLeft:"180px"}}>        
                             <h4 className="text-center p-2" style={{color:"white"}}>All Recipient</h4>
-                            <table className="table table-sm">
+                            <table className="table table-sm" >
                                 <thead>
                                     <tr>
                                         <th>Id</th>
@@ -81,7 +79,7 @@ function Recipient(){
                                 </tbody>
                             </table><br/>
                         </div>
-                        <div  style={{paddingLeft:"100px"}}>
+                        <div  style={{paddingLeft:"290px"}}>
                             <h4 className="text-center p-2"style={{color:"white"}}>Add Recipient</h4>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">

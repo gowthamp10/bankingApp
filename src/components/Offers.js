@@ -1,17 +1,14 @@
-import Header from "./Header";
-import SideBar from "./SideBar";
 import '../App.css'
+import HeaderCust from "./HeaderCust";
 function Offers(){
     return(
         <>
-        <Header/>
+        <HeaderCust/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
+                
                 <div className="col-sm-10"><br/><br/>
-                    <div className="row">
+                    <div className="row" >
                         <div className="col-sm-3">
                             <div className="card shadow bg-warning">
                                 <div className="card-body">
@@ -53,6 +50,7 @@ function Offers(){
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

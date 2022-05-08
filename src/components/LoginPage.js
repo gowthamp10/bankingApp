@@ -7,7 +7,7 @@ import loginvalidation from "../loginvalidation"
 
 function LoginPage(){
     const dispatch=useDispatch()
-        const navigate=useNavigate()
+    const navigate=useNavigate()
     const [errmsg,setErrmsg]=useState(null)
 
     const [user,setUser]=useState({

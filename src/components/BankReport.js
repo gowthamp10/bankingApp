@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import SideBar from "./SideBar";
 
 function BankReport(){
     const [trans,setTrans]=useState([])
@@ -20,10 +19,8 @@ function BankReport(){
         <Header/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
-                <div className="col-sm-10">
+                
+                <div style={{paddingLeft:"230px"}}>
                     <br/>
                     <table class="table ">
 						<thead class="thead-light">

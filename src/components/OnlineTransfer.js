@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Header from "./Header";
-import SideBar from "./SideBar";
+import HeaderCust from "./HeaderCust";
+
 
 
 function OnlineTransfer(){
@@ -48,15 +48,13 @@ function OnlineTransfer(){
     },[])
     return (
         <>
-        <Header/>   
+        <HeaderCust/>   
         <div className="container-fluid">
-            <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
-                <div className="col-sm-10">
-                <div className="row">
-	<div className="col-sm-6 mx-auto">
+        <div className="row">
+                
+        <div className="col-sm-10">
+        <div className="row">
+	<div className="col-sm-6 mx-auto"style={{paddingLeft:"150px"}}>
         <div className="card shadow mt-3">
             <div className="card-header">
                 <h5>Account Transfer</h5>

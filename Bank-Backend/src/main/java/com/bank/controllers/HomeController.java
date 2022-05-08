@@ -32,7 +32,7 @@ public class HomeController {
 			return Response.status(HttpStatus.NOT_FOUND);
 	}
 	
-	@GetMapping("/verify")
+	@GetMapping("/verify")//get the user info
 	public ResponseEntity<?> verifyEmail(String email) {
 		Users user=uservice.verify(email);
 		if(user!=null)
@@ -40,6 +40,6 @@ public class HomeController {
 		else
 			return Response.success("Available");
 	}
-	
+
 	
 }

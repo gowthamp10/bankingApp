@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import SideBar from "./SideBar";
 import '../App.css'
+
 function Dashboard(){
     const [data,setData]=useState({})
     useEffect(()=>{
@@ -16,12 +16,10 @@ function Dashboard(){
         <Header/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
-                <div className="col-sm-10" style={{paddingLeft:"300px"}}><br/><br/>
+                
+                <div  style={{paddingLeft:"500px"}}><br/><br/>
                     <div className="row">
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                             <div className="card shadow bg-primary text-white text-right">
                                 <div className="card-body">
                                     <h4>Customers having accounts</h4>

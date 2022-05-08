@@ -23,6 +23,7 @@ import UpdateInfo from './components/UpdateInfo';
 import Recipient from './components/Recipient';
 import Balance from './components/Balance';
 import Offers from './components/Offers';
+import Email from './components/Email';
 
 function App() {
   return (
@@ -51,7 +52,8 @@ function App() {
           <Route element={<CustomerHome/>} path="/chome"/>                              
           <Route element={<Recipient/>} path="/recipient"/>                              
           <Route element={<OnlineTransfer/>} path="/otransfer"/> 
-          <Route element={<Offers/>} path="/offers"/>                              
+          <Route element={<Offers/>} path="/offers"/>  
+          <Route element={<Email/>} path="/query"/>                            
         </Routes>
       </BrowserRouter>
     </div>

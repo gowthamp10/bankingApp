@@ -13,8 +13,4 @@ public interface TransactionRepository extends JpaRepository<Transactions, Integ
 
 	@Query(value="SELECT * FROM Transactions t WHERE t.accountno=?1",nativeQuery = true)
 	List<Transactions> findByAccno(int accno);
-	
-	@Query(value="SELECT * FROM Transactions t WHERE t.tdate=date(now())",nativeQuery = true)
-	List<Transactions> todays();
-	
 }

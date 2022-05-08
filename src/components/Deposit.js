@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import SearchAccount from "./SearchAccount";
-import SideBar from "./SideBar";
 
 function Deposit(){
     const navigate=useNavigate()
@@ -48,11 +47,9 @@ function Deposit(){
         <Header/>
         <div className="container-fluid">
             <div className="row">
-                <div className="col-sm-2 bg-transparent p-0 border-right border-primary" style={{height:"calc(100vh - 80px)"}}>
-                    <SideBar />
-                </div>
+                
                 <div className="col-sm-10">
-                    <h4 className="text-left p-2 border-bottom border-success">Deposit</h4>
+                    
                     <SearchAccount setData={setData} />
 
                     { data.found  ? (<>
